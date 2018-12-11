@@ -1,0 +1,102 @@
+@mixin main-theme() {
+  .main {
+    &__container {}
+  
+    &-list {
+      display: flex;
+      justify-content: left;
+      text-align: left;
+      flex-wrap: wrap;
+  
+      &-item {
+        @include main-section(&);
+
+        &__header {
+          @include main-header-theme();
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          &--dev {
+            background: #ff3300;
+          }
+          &--testing {
+            background: #ffc125;
+          }
+          &--publishing {
+            background: #339900;
+          }
+          &--published {
+            background: #2854ff;
+          }
+          &--merged {
+            background: #bf00ff;
+          }
+        }
+
+        &__add {
+          cursor: pointer;
+        }
+  
+        &__list {
+          @include main-list-theme();
+
+          .dragArea {
+            min-height: 100px;
+          }
+        }
+
+        &__item {
+          @include main-list-item-theme();
+
+          &-trash-alt {
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #000;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin main-section($father) {
+  $margin: 10px;
+
+  width: calc((100% / 3) - (#{$margin} * 2));
+  margin-right: $margin;
+  margin-bottom: $margin;
+  background: #eee;
+  border-radius: 10px;
+
+  #{$father}:last-of-type {
+    margin-right: 0;
+  }
+}
+
+@mixin main-header-theme {
+  width: 100%;
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+@mixin main-list-theme {
+  width: 100%;
+  padding: 10px;
+}
+
+@mixin main-list-item-theme {
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  position: relative;
+}
+
+@include main-theme();
