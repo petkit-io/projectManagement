@@ -1,5 +1,8 @@
 # project-management
 
+## demo
+![操作用法](https://petkit-img3.oss-cn-hangzhou.aliyuncs.com/img/498e9415b50a4997906d1cac970ab31c)
+
 ## Project setup
 ```
 yarn install
