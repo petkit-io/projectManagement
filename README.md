@@ -1,7 +1,7 @@
 # project-management
 
 ## demo
-![https://petkit-img3.oss-cn-hangzhou.aliyuncs.com/img/e4a9372258c0426fb6af29b96d1ac149](https://petkit-img3.oss-cn-hangzhou.aliyuncs.com/img/e4a9372258c0426fb6af29b96d1ac149)
+[demo](https://petkit-img3.oss-cn-hangzhou.aliyuncs.com/img/e4a9372258c0426fb6af29b96d1ac149)
 
 ## Project setup
 ```
